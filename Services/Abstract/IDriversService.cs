@@ -2,7 +2,7 @@
 
 namespace Services.Abstract
 {
-    public interface IDriverService
+    public interface IDriversService
     {
         void AddDriver(Driver driver);
         void UpdateDriver(Driver driver);

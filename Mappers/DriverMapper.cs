@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Entities;
+using Models;
 
 namespace Mappers
 {
@@ -14,6 +15,17 @@ namespace Mappers
             };
         }
 
-        //public static DriverMapper ToDomain();
+        public static Driver ToDomain(this DriverModel driver)
+        {
+            if(driver == null) return null;
+
+            return new Driver
+            {
+                Name = driver.Name,
+                Age = driver.Age
+
+                Vehicles = driver.Vehicles.Select(x=>x.ToDomain()).ToList()
+            };
+        }
     }
 }

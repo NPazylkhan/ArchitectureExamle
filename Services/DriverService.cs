@@ -5,7 +5,7 @@ using Services.Abstract;
 
 namespace Services
 {
-    public class DriverService : IDriverService
+    public class DriverService : IDriversService
     {
         private readonly IDriversRepository _driversRepository;
 

@@ -15,7 +15,7 @@ namespace Mappers
             };
         }
 
-        public static Driver ToDomain(this DriverModel driver)
+        public static Driver? ToDomain(this DriverModel driver)
         {
             if(driver == null) return null;
 
@@ -24,7 +24,7 @@ namespace Mappers
                 Name = driver.Name,
                 Age = driver.Age
 
-                Vehicles = driver.Vehicles.Select(x=>x.ToDomain()).ToList()
+                //Vehicles = driver.Vehicles.Select(x=>x.ToDomain()).ToList()
             };
         }
     }
